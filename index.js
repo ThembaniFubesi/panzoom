@@ -445,7 +445,7 @@ function createPanZoom(domElement, options) {
 
     moveByAnimation = animate(from, to, {
       step: function (v) {
-        moveBy(v.x - lastX, v.y - lastY);
+        moveBy(Math.floor(v.x - lastX), Math.floor(v.y - lastY));
 
         lastX = v.x;
         lastY = v.y;
